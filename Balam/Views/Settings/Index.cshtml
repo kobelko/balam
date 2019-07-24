@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Balam.Models.Settings>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverWage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverTravelExpenses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passengers)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetProfit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Provisioning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DaysPerMonth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cleaning)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maintenance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taxes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Parking)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fund)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instalment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneLine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtherCosts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasMileage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverWage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DriverTravelExpenses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passengers)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetProfit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Provisioning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaysPerMonth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cleaning)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maintenance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Taxes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Parking)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fund)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instalment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneLine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtherCosts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasMileage)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

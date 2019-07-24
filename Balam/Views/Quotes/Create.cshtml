@@ -1,0 +1,311 @@
+﻿@model Balam.Models.Quote
+@{
+    ViewData["Title"] = "Create";
+
+    var Settings = (Settings)ViewBag.Settings;
+}
+
+<h1>Create</h1>
+
+<h4>Quote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" id="quoteForm">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client" class="control-label"></label>
+                <input asp-for="Client" class="form-control" />
+                <span asp-validation-for="Client" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"></label>
+                <input asp-for="Destination" class="form-control" />
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Days" class="control-label"></label>
+                <input asp-for="Days" class="form-control" />
+                <span asp-validation-for="Days" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distance" class="control-label"></label>
+                <input asp-for="Distance" class="form-control" />
+                <span asp-validation-for="Distance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Toll" class="control-label"></label>
+                <input asp-for="Toll" class="form-control" />
+                <span asp-validation-for="Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GasolineIncluded" /> @Html.DisplayNameFor(model => model.GasolineIncluded)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DriverIncluded" /> @Html.DisplayNameFor(model => model.DriverIncluded)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApportionDays" class="control-label"></label>
+                <input asp-for="ApportionDays" class="form-control" />
+                <span asp-validation-for="ApportionDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProvisioningDays" class="control-label"></label>
+                <input asp-for="ProvisioningDays" class="form-control" />
+                <span asp-validation-for="ProvisioningDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedCost" class="control-label"></label>
+                <input asp-for="CalculatedCost" class="form-control" />
+                <span asp-validation-for="CalculatedCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedPrice" class="control-label"></label>
+                <input asp-for="CalculatedPrice" class="form-control" />
+                <span asp-validation-for="CalculatedPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalPrice" class="control-label"></label>
+                <input asp-for="FinalPrice" class="form-control" />
+                <span asp-validation-for="FinalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profit" class="control-label"></label>
+                <input asp-for="Profit" class="form-control" />
+                <span asp-validation-for="Profit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompetitionPrice" class="control-label"></label>
+                <input asp-for="CompetitionPrice" class="form-control" />
+                <span asp-validation-for="CompetitionPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DriverWage" class="control-label"></label>
+                <input asp-for="DriverWage" class="form-control" />
+                <span asp-validation-for="DriverWage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DriverTravelExpenses" class="control-label"></label>
+                <input asp-for="DriverTravelExpenses" class="form-control" />
+                <span asp-validation-for="DriverTravelExpenses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passengers" class="control-label"></label>
+                <input asp-for="Passengers" class="form-control" />
+                <span asp-validation-for="Passengers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TargetProfit" class="control-label"></label>
+                <input asp-for="TargetProfit" class="form-control" />
+                <span asp-validation-for="TargetProfit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Provisioning" class="control-label"></label>
+                <input asp-for="Provisioning" class="form-control" />
+                <span asp-validation-for="Provisioning" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DaysPerMonth" class="control-label"></label>
+                <input asp-for="DaysPerMonth" class="form-control" />
+                <span asp-validation-for="DaysPerMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cleaning" class="control-label"></label>
+                <input asp-for="Cleaning" class="form-control" />
+                <span asp-validation-for="Cleaning" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maintenance" class="control-label"></label>
+                <input asp-for="Maintenance" class="form-control" />
+                <span asp-validation-for="Maintenance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Taxes" class="control-label"></label>
+                <input asp-for="Taxes" class="form-control" />
+                <span asp-validation-for="Taxes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Parking" class="control-label"></label>
+                <input asp-for="Parking" class="form-control" />
+                <span asp-validation-for="Parking" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fund" class="control-label"></label>
+                <input asp-for="Fund" class="form-control" />
+                <span asp-validation-for="Fund" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instalment" class="control-label"></label>
+                <input asp-for="Instalment" class="form-control" />
+                <span asp-validation-for="Instalment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneLine" class="control-label"></label>
+                <input asp-for="PhoneLine" class="form-control" />
+                <span asp-validation-for="PhoneLine" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OtherCosts" class="control-label"></label>
+                <input asp-for="OtherCosts" class="form-control" />
+                <span asp-validation-for="OtherCosts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasPrice" class="control-label"></label>
+                <input asp-for="GasPrice" class="form-control" />
+                <span asp-validation-for="GasPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasMileage" class="control-label"></label>
+                <input asp-for="GasMileage" class="form-control" />
+                <span asp-validation-for="GasMileage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        var daysInput = jQuery('#quoteForm [name="Days"]');
+        var distanceInput = jQuery('#quoteForm [name="Distance"]');
+        var tollInput = jQuery('#quoteForm [name="Toll"]');
+        var gasolineIncludedCheckbox = jQuery('#quoteForm [name="GasolineIncluded"]');
+        var driverIncludedCheckbox = jQuery('#quoteForm [name="DriverIncluded"]');
+        var apportionDaysInput = jQuery('#quoteForm [name="ApportionDays"]');
+        var provisioningDaysInput = jQuery('#quoteForm [name="ProvisioningDays"]');
+        var calculatedCostInput = jQuery('#quoteForm [name="CalculatedCost"]');
+        var calculatedPriceInput = jQuery('#quoteForm [name="CalculatedPrice"]');
+        var finalPriceInput = jQuery('#quoteForm [name="FinalPrice"]');
+        var profitInput = jQuery('#quoteForm [name="Profit"]');
+
+        var driverWageInput = jQuery('#quoteForm [name="DriverWage"]');
+        var driverTravelExpensesInput = jQuery('#quoteForm [name="DriverTravelExpenses"]');
+        var passengersInput = jQuery('#quoteForm [name="Passengers"]');
+        var targetProfitInput = jQuery('#quoteForm [name="TargetProfit"]');
+        var daysPerMonthInput = jQuery('#quoteForm [name="DaysPerMonth"]');
+        var cleaningInput = jQuery('#quoteForm [name="Cleaning"]');
+        var maintenanceInput = jQuery('#quoteForm [name="Maintenance"]');
+        var taxesInput = jQuery('#quoteForm [name="Taxes"]');
+        var parkingInput = jQuery('#quoteForm [name="Parking"]');
+        var provisioningInput = jQuery('#quoteForm [name="Provisioning"]');
+        var fundInput = jQuery('#quoteForm [name="Fund"]');
+        var instalmentInput = jQuery('#quoteForm [name="Instalment"]');
+        var phoneLineInput = jQuery('#quoteForm [name="PhoneLine"]');
+        var gasPriceInput = jQuery('#quoteForm [name="GasPrice"]');
+        var gasMileageInput = jQuery('#quoteForm [name="GasMileage"]');
+        var otherInput = jQuery('#quoteForm [name="OtherCosts"]');
+
+        var formatter = new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' });
+
+        daysInput.change(function () { calculateRate() });
+        distanceInput.change(function () { calculateRate() });
+        tollInput.change(function () { calculateRate() });
+        gasolineIncludedCheckbox.change(function () { calculateRate() });
+        driverIncludedCheckbox.change(function () { calculateRate() });
+        provisioningDaysInput.change(function () { calculateRate() });
+        apportionDaysInput.change(function () { calculateRate() });
+        calculatedCostInput.change(function () { calculateRate() });
+        calculatedPriceInput.change(function () { calculateRate() });
+        finalPriceInput.change(function () { calculateRate() });
+        profitInput.change(function () { calculateRate() });
+
+        driverWageInput.change(function () { calculateRate() });
+        driverTravelExpensesInput.change(function () { calculateRate() });
+        passengersInput.change(function () { calculateRate() });
+        targetProfitInput.change(function () { calculateRate() });
+        provisioningInput.change(function () { calculateRate() });
+        daysPerMonthInput.change(function () { calculateRate() });
+        cleaningInput.change(function () { calculateRate() });
+        maintenanceInput.change(function () { calculateRate() });
+        taxesInput.change(function () { calculateRate() });
+        parkingInput.change(function () { calculateRate() });
+        fundInput.change(function () { calculateRate() });
+        instalmentInput.change(function () { calculateRate() });
+        phoneLineInput.change(function () { calculateRate() });
+        gasPriceInput.change(function () { calculateRate() });
+        gasMileageInput.change(function () { calculateRate() });
+        otherInput.change(function () { calculateRate() });
+
+        function calculateRate() {
+            var days = parseInt(daysInput.val());
+            var distance = parseFloat(distanceInput.val());
+            var toll = parseFloat(tollInput.val());
+            var gasolineIncluded = gasolineIncludedCheckbox.is(':checked');
+            var provisioningDays = parseInt(provisioningDaysInput.val());
+            var driverIncluded = driverIncludedCheckbox.is(':checked');
+            var profit = parseFloat(profitInput.val());
+
+            var driverWage = parseFloat(driverWageInput.val());
+            var driverTravelExpenses = parseFloat(driverTravelExpensesInput.val());
+            var passengers = parseFloat(passengersInput.val());
+            var targetProfit = parseFloat(targetProfitInput.val());
+            var provisioning = parseFloat(provisioningInput.val());
+            var daysPerMonth = parseFloat(daysPerMonthInput.val());
+            var cleaning = parseFloat(cleaningInput.val());
+            var maintenance = parseFloat(maintenanceInput.val());
+            var taxes = parseFloat(taxesInput.val());
+            var parking = parseFloat(parkingInput.val());
+            var fund = parseFloat(fundInput.val());
+            var instalment = parseFloat(instalmentInput.val());
+            var phoneLine = parseFloat(phoneLineInput.val());
+            var gasPrice = parseFloat(gasPriceInput.val());
+            var gasMileage = parseFloat(gasMileageInput.val());
+            var other = parseFloat(otherInput.val());
+            var apportionDays = parseFloat(apportionDaysInput.val());
+
+            var driver = driverIncluded ? driverWage : 0;
+            var gasoline = gasolineIncluded ? distance * gasPrice / gasMileage : 0;
+            var fixedCostMonthly = (phoneLine + instalment + maintenance + taxes + parking + fund);
+            var fixedCost = fixedCostMonthly / daysPerMonth;
+            var aditionalDays = driverTravelExpenses + driver + cleaning + other;
+
+            console.log("gasoline: " + gasoline);
+            console.log("toll: " + toll);
+            console.log("driver: " + driver);
+            console.log("other: " + other);
+            console.log("provisioning days: " + provisioningDays);
+            console.log("provisioning: " + provisioning);
+            console.log("cleaning: " + cleaning);
+            console.log("fixedCost: " + fixedCost);
+            console.log("days: " + days);
+            console.log("aditionalDays: " + aditionalDays);
+
+            var cost = (gasoline + toll) * 2.0 + driver + other + cleaning + apportionDays * fixedCost + (days - 1) * aditionalDays + provisioningDays * provisioning;
+            var price = cost * (1 + profit);
+            
+            console.log("Cost: " + cost);
+
+            calculatedCostInput.val(cost);
+            calculatedPriceInput.val(price);
+            finalPriceInput.val(price / passengers);
+        }
+    </script>
+}

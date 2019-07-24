@@ -1,0 +1,114 @@
+﻿@model Balam.Models.Settings
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Settings</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DriverWage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DriverWage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DriverTravelExpenses)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DriverTravelExpenses)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Passengers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Passengers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TargetProfit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TargetProfit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Provisioning)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Provisioning)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DaysPerMonth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DaysPerMonth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cleaning)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cleaning)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Maintenance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Maintenance)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Taxes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Taxes)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Parking)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Parking)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fund)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fund)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Instalment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Instalment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneLine)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PhoneLine)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OtherCosts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.OtherCosts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GasPrice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GasPrice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GasMileage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GasMileage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

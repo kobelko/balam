@@ -1,0 +1,114 @@
+﻿@model Balam.Models.Quote
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Quote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Client" class="control-label"></label>
+                <input asp-for="Client" class="form-control" />
+                <span asp-validation-for="Client" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination" class="control-label"></label>
+                <input asp-for="Destination" class="form-control" />
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="State" class="control-label"></label>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Days" class="control-label"></label>
+                <input asp-for="Days" class="form-control" />
+                <span asp-validation-for="Days" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distance" class="control-label"></label>
+                <input asp-for="Distance" class="form-control" />
+                <span asp-validation-for="Distance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Toll" class="control-label"></label>
+                <input asp-for="Toll" class="form-control" />
+                <span asp-validation-for="Toll" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="GasolineIncluded" /> @Html.DisplayNameFor(model => model.GasolineIncluded)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DriverIncluded" /> @Html.DisplayNameFor(model => model.DriverIncluded)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProvisioningDays" class="control-label"></label>
+                <input asp-for="ProvisioningDays" class="form-control" />
+                <span asp-validation-for="ProvisioningDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ApportionDays" class="control-label"></label>
+                <input asp-for="ApportionDays" class="form-control" />
+                <span asp-validation-for="ApportionDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedCost" class="control-label"></label>
+                <input asp-for="CalculatedCost" class="form-control" />
+                <span asp-validation-for="CalculatedCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CalculatedPrice" class="control-label"></label>
+                <input asp-for="CalculatedPrice" class="form-control" />
+                <span asp-validation-for="CalculatedPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinalPrice" class="control-label"></label>
+                <input asp-for="FinalPrice" class="form-control" />
+                <span asp-validation-for="FinalPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profit" class="control-label"></label>
+                <input asp-for="Profit" class="form-control" />
+                <span asp-validation-for="Profit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompetitionPrice" class="control-label"></label>
+                <input asp-for="CompetitionPrice" class="form-control" />
+                <span asp-validation-for="CompetitionPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
